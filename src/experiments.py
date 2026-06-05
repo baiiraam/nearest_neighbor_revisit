@@ -5,7 +5,7 @@ Run all experiments for the assignment.
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Optional
 
 # Import custom modules
 from knn import KNN
@@ -193,7 +193,7 @@ def plot_cv_results(results: Dict, save_path: str = "figures/cv_f1_vs_k.png"):
 
 
 def computational_benchmark(
-    X: np.ndarray, y: np.ndarray, train_sizes: List[int] = None, test_size: int = 100
+    X: np.ndarray, y: np.ndarray, train_sizes: Optional[List[int]] = None, test_size: int = 100
 ) -> Dict:
     """
     Benchmark prediction time as function of training set size.
